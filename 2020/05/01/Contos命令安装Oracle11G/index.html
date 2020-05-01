@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">YwT  </title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "YwTleesin-zed";
+  mashiro_option.author_name = "leesin-zed";
+  mashiro_option.site_url = "https://leesin-zed.github.io";
+  mashiro_option.v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz";
+  mashiro_option.v_appKey = "mgOpfzbkHYqU92CV4IDlAUHQ";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.2/images/cover/1.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.2/images/cover/5.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.2/images/cover/6.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.2/images/cover/7.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.2/images/cover/8.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.2/images/cover/9.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.2/images/cover/10.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.2/images/cover/11.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.2/images/cover/12.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.2/images/cover/13.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.2/images/cover/14.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.2/images/cover/15.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.2/images/cover/17.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.3/images/cover/19.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.3/images/cover/20.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.3/images/cover/21.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.3/images/cover/22.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.3/images/cover/23.jpg,https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.3/images/cover/24.jpg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+<!-- 离开页面回归页面标题显示 -->
+<script src="https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.3/js/hititle.js"></script>
+<!-- 顶部 -->
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script><link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet"><style>
+  .pace .pace-progress {  background: #FFBFCA; /*进度条颜色*/
+  height: 3px;  }
+  .pace .pace-progress-inner {  box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+  }
+  .pace .pace-activity {  border-top-color: #1E92FB;    /*上边框颜色*/
+  border-left-color: #1E92FB;    /*左边框颜色*/
+  }</style>
+</head>
+</html>
+<!-- 看板娘 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"> <!-- 这条在sakura中已有，可不添加 --><script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<!-- 鼠标点击特效 -->
+<script src="https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.3/js/cursor-effects.js"></script>
+<!-- 樱花飘落 -->
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/sakura.js"></script>
+<!-- 背景线条 -->
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/canvas-nest.min.js"></script>
+<!-- 预加载 -->
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<!-- 计数 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://leesin-zed.github.io">
+          <img src="https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.4.1/images/headimg/girl.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>充满激情,努力生活,心态放好~</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/leesin-zed" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.4.1/images/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=EWhmZSMhIChRYGA-cn58" target="_blank" class="social-github" title="email">
+                    <img src="https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.4.1/images/social/email.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.4.1/images/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.4.1/images/social/wechatma.jpg">
+                  </div>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.4.1/images/social/qq.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.4.1/images/social/qqma.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">YwT</span>
+            <span class="shironeko">leesin-zed</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/资源/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/转载/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/图集/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Lab
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/client/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+                    客户端
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                    RSS
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.4.1/images/blogcover/1.gif);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.4.1/images/blogcover/1.gif">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Contos命令安装Oracle11G</h1>
+      <p class="entry-census">
+        <span>
+          <a href="http://localhost:4000/">
+            <img src="https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.4/images/headimg/girl.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="http://localhost:4000/">YwT</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-5-1<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <p>Contos6,Contos7版本一样的安装,只是部分命令不同,区别一下就好~</p>
+<p>首先去官网根据自己的系统位数下载以下两个版本软件压缩包,官网: <a href="http://www.oracle.com/technetwork/database/enterprise-edition/downloads/" target="_blank" rel="noopener">http://www.oracle.com/technetwork/database/enterprise-edition/downloads/</a></p>
+<ul>
+<li>linux.x64_11gR2_database_1of2.zip</li>
+<li>linux.x64_11gR2_database_2of2.zip</li>
+</ul>
+<p>或者到我网盘下载 : <a href="https://pan.baidu.com/s/1a1iXeIj857gJPJSthQ0F8w" target="_blank" rel="noopener">https://pan.baidu.com/s/1a1iXeIj857gJPJSthQ0F8w</a> 提取码: yb8o</p>
+<h3 id="1-添加swap分区"><a href="#1-添加swap分区" class="headerlink" title="1. 添加swap分区"></a>1. 添加swap分区</h3><ul>
+<li><pre><code class="shell">dd if=/dev/zero of=/swap bs=1024 count=2048000
+</code></pre>
+<p>格式化交换文件:</p>
+</li>
+<li><pre><code class="shell">mkswap /swap
+</code></pre>
+<p>赋予权限:</p>
+</li>
+<li><pre><code class="shell">chmod 600 /swap
+</code></pre>
+<p>启动交换分区:</p>
+</li>
+<li><pre><code class="shell">swapon /swap
+</code></pre>
+<p>设置自动挂载:</p>
+</li>
+<li><pre><code class="shell">echo &quot;/swap swap swap default 0 0&quot;&gt;&gt;/etc/fstab
+</code></pre>
+</li>
+</ul>
+<h3 id="2-配置hostname"><a href="#2-配置hostname" class="headerlink" title="2.配置hostname"></a>2.配置hostname</h3><p>​    如果想要自己的主机名的话,该步也可跳过,但是后面需要修改配置文件,建议按步骤执行过去~</p>
+<ul>
+<li><p>Contos 7 版本配置hostname</p>
+<ol>
+<li><pre><code class="shell">hostnamectl set-hostname oracledb
+</code></pre>
+</li>
+<li><pre><code class="shell">echo &quot;127.0.0.1     oracledb&quot; &gt;&gt;/etc/hosts
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>Contos 6 版本配置hostname</p>
+<ol>
+<li><pre><code class="shell">vim /etc/sysconfig/network
+</code></pre>
+</li>
+<li><pre><code class="shell">将 HOSTNAME=xxx 改成 HOSTNAME=oracledb
+</code></pre>
+</li>
+<li><pre><code class="shell">vim /etc/hosts
+</code></pre>
+</li>
+<li><pre><code class="shell">将两行的 localhost.localdomain 改成oracledb
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="3-关闭selinux"><a href="#3-关闭selinux" class="headerlink" title="3.关闭selinux"></a>3.关闭selinux</h3><ul>
+<li><pre><code class="shell">sed -i &quot;s/SELINUX=enforcing/SELINUX=disabled/&quot; /etc/selinux/config
+</code></pre>
+</li>
+<li><pre><code class="shell">setenforce 0
+</code></pre>
+</li>
+</ul>
+<h3 id="4-安装依赖"><a href="#4-安装依赖" class="headerlink" title="4.安装依赖"></a>4.安装依赖</h3><ul>
+<li><pre><code class="shell">yum -y install binutils compat-libcap1 compat-libstdc++-33 gcc gcc-c++ glibc glibc-devel ksh libaio libaio-devel libgcc libstdc++ libstdc++-devel libXi libXtst make sysstat unixODBC unixODBC-devel
+</code></pre>
+<p>如果上步安装依赖出现版本问题:  <strong>Protected multilib versions: libgcc-4.4.7-23.el6.i686 != libgcc-4.4.7-18.el6.x86_64</strong></p>
+<p>那么执行完下面这句强制安装命令再次执行上步命令安装依赖即可:</p>
+<pre><code class="shell">yum -y install libaio.so.1 libgcc_s.so.1 libstdc++.so.6 --setopt=protected_multilib=false libgcc
+</code></pre>
+<p>#####检查依赖是否安装成功:</p>
+</li>
+<li><pre><code class="shell">rpm -q binutils compat-libcap1 compat-libstdc++-33 gcc gcc-c++ glibc glibc-devel ksh libaio libaio-devel libgcc libstdc++ libstdc++-devel libXi libXtst make sysstat unixODBC unixODBC-devel
+</code></pre>
+</li>
+</ul>
+<h3 id="5-创建系统组和用户"><a href="#5-创建系统组和用户" class="headerlink" title="5.创建系统组和用户"></a>5.创建系统组和用户</h3><ul>
+<li><p>添加组</p>
+<ol>
+<li><pre><code class="shell">groupadd oinstall
+</code></pre>
+</li>
+<li><pre><code class="shell">groupadd dba
+</code></pre>
+</li>
+<li><pre><code class="shell">groupadd oper
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>添加用户和设置用户密码</p>
+<ol>
+<li><pre><code class="shell">useradd -g oinstall -G dba oracle
+</code></pre>
+</li>
+<li><pre><code class="shell">passwd oracle
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="6-配置参数和资源"><a href="#6-配置参数和资源" class="headerlink" title="6.配置参数和资源"></a>6.配置参数和资源</h3><ul>
+<li><p>使用 <strong>vim /etc/sysctl.conf</strong>  命令编辑该配置文件,加入以下参数,如果对应已存在的数值大于下面参数的数值             就保留,否则修改</p>
+<pre><code class="shell">fs.aio-max-nr = 1048576
+fs.file-max = 6815744
+kernel.shmall = 2097152
+kernel.shmmax = 536870912
+kernel.shmmni = 4096
+kernel.sem = 250 32000 100 128
+net.ipv4.ip_local_port_range = 9000 65500
+net.core.rmem_default = 262144
+net.core.rmem_max = 4194304
+net.core.wmem_default = 262144
+net.core.wmem_max = 1048576
+</code></pre>
+</li>
+<li><p>执行以下命令让参数生效</p>
+<pre><code class="shell">sysctl -p
+</code></pre>
+</li>
+<li><p>使用 <strong>vim /etc/security/limits.conf</strong> 命令,在该配置文件中加入以下参数</p>
+<pre><code class="shell">oracle              soft    nproc   2047
+oracle              hard    nproc   16384
+oracle              soft    nofile  1024
+oracle              hard    nofile  65536
+</code></pre>
+</li>
+<li><p>使用 <strong>vim /etc/pam.d/login</strong> 命令,在该配置文件中加入以下参数</p>
+<pre><code class="shell">session required /lib64/security/pam_limits.so
+session required pam_limits.so
+</code></pre>
+</li>
+<li><p>使用 <strong>vim /etc/profile</strong> 命令,在该配置文件中加入以下参数</p>
+<pre><code class="shell">if [ $USER = &quot;oracle&quot; ]; then
+   if [ $SHELL = &quot;/bin/ksh&quot; ]; then
+       ulimit -p 16384
+       ulimit -n 65536
+    else
+       ulimit -u 16384 -n 65536
+   fi
+fi
+</code></pre>
+</li>
+<li><p>执行以下命令让<strong>/etc/profile</strong>文件生效</p>
+<pre><code class="shell">source /etc/profile
+</code></pre>
+</li>
+<li><p>禁用Transparent HugePages(启用Transparent HugePages,可能会导致造成内存在运行时的延迟分配，Oracle官方建议使用传统的HugePages)</p>
+<p>执行以下命令查看是否启用Transparent HugePages,如显示<strong>[always]</strong>表示启动了,所以需要禁用</p>
+<pre><code class="shell">cat /sys/kernel/mm/transparent_hugepage/enabled
+</code></pre>
+<p>禁用方法:</p>
+<ol>
+<li><p>使用 <strong>vim /etc/rc.d/rc.local</strong> 命令,在该文件中添加如下内容:</p>
+<pre><code class="shell">if test -f /sys/kernel/mm/transparent_hugepage/enabled; then
+echo never &gt; /sys/kernel/mm/transparent_hugepage/enabled
+fi
+if test -f /sys/kernel/mm/transparent_hugepage/defrag; then
+echo never &gt; /sys/kernel/mm/transparent_hugepage/defrag
+fi
+</code></pre>
+</li>
+<li><p>添加可执行权限</p>
+<pre><code class="shell">chmod +x /etc/rc.d/rc.local
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="7-创建Oracle安装目录"><a href="#7-创建Oracle安装目录" class="headerlink" title="7.创建Oracle安装目录"></a>7.创建Oracle安装目录</h3><ul>
+<li><p>创建安装目录并赋予权限</p>
+<ol>
+<li><pre><code class="shell">mkdir -p /data/app/
+</code></pre>
+</li>
+<li><pre><code class="shell">chown -R oracle:oinstall /data/app/
+</code></pre>
+</li>
+<li><pre><code class="shell">chmod -R 775 /data/app/
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="8-配置用户环境变量"><a href="#8-配置用户环境变量" class="headerlink" title="8.配置用户环境变量"></a>8.配置用户环境变量</h3><ul>
+<li><p>使用 <strong>vim /home/oracle/.bash_profile</strong> 命令,在该配置文件加入以下配置</p>
+<pre><code class="shell">umask 022
+export ORACLE_HOSTNAME=oracledb
+export ORACLE_BASE=/data/app/oracle
+export ORACLE_HOME=$ORACLE_BASE/product/11.2.0/
+export ORACLE_SID=ORCL
+export PATH=.:$ORACLE_HOME/bin:$ORACLE_HOME/OPatch:$ORACLE_HOME/jdk/bin:$PATH
+export LC_ALL=&quot;en_US&quot;
+export LANG=&quot;en_US&quot;
+export NLS_LANG=&quot;AMERICAN_AMERICA.ZHS16GBK&quot;
+export NLS_DATE_FORMAT=&quot;YYYY-MM-DD HH24:MI:SS&quot;
+</code></pre>
+</li>
+<li><p>重启系统  (重启完毕后也可查看之前的  Transparent HugePages  是否禁用  [never]  表示禁用)</p>
+<pre><code class="shell">reboot
+</code></pre>
+</li>
+</ul>
+<h3 id="9-解压下载的两个Oracle压缩包文件"><a href="#9-解压下载的两个Oracle压缩包文件" class="headerlink" title="9.解压下载的两个Oracle压缩包文件"></a>9.解压下载的两个Oracle压缩包文件</h3><ul>
+<li><p>进入存放压缩包的目录,执行以下命令将资源解压到指定目录</p>
+<ol>
+<li><pre><code class="shell">unzip -q linux.x64_11gR2_database_1of2.zip -d /data
+</code></pre>
+</li>
+<li><pre><code class="shell">unzip -q linux.x64_11gR2_database_2of2.zip -d /data
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>创建目录并将文件复制到该目录</p>
+<ol>
+<li><pre><code class="shell">mkdir -p /data/etc
+</code></pre>
+</li>
+<li><pre><code class="shell">cp /data/database/response/* /data/etc/
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>使用 <strong>vim /data/etc/db_install.rsp</strong> 命令,对应以下属性值</p>
+<pre><code class="shell">oracle.install.option=INSTALL_DB_SWONLY
+ORACLE_HOSTNAME=oracledb #如果配置hostname步骤跳过了的话,该参数值请填写自己的hostname
+UNIX_GROUP_NAME=oinstall
+INVENTORY_LOCATION=/data/app/oracle/inventory
+SELECTED_LANGUAGES=en,zh_CN
+ORACLE_HOME=/data/app/oracle/product/11.2.0
+ORACLE_BASE=/data/app/oracle
+oracle.install.db.InstallEdition=EE
+oracle.install.db.isCustomInstall=true
+oracle.install.db.DBA_GROUP=dba
+oracle.install.db.OPER_GROUP=dba
+DECLINE_SECURITY_UPDATES=true
+</code></pre>
+</li>
+</ul>
+<h3 id="10-安装Oracle"><a href="#10-安装Oracle" class="headerlink" title="10.安装Oracle"></a>10.安装Oracle</h3><ul>
+<li><p>执行以下命令开始安装,如果安装时间长的请耐心等待一会</p>
+<ol>
+<li><pre><code class="shell">su - oracle
+</code></pre>
+</li>
+<li><pre><code class="shell">cd /data/database
+</code></pre>
+</li>
+<li><pre><code class="shell">./runInstaller -silent -responseFile /data/etc/db_install.rsp -ignorePrereq
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>出现如下,说明安装完成</p>
+<p><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200428222551399.png" alt="image-20200428222551399.png"></p>
+</li>
+<li><p><strong>切换 root 用户</strong></p>
+<pre><code class="shell">su - root
+</code></pre>
+</li>
+<li><p><strong>执行以下脚本</strong></p>
+<ol>
+<li><pre><code class="shell">sh /data/app/oracle/inventory/orainstRoot.sh
+</code></pre>
+</li>
+<li><pre><code class="shell">sh /data/app/oracle/product/11.2.0/root.sh
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="11-配置监听"><a href="#11-配置监听" class="headerlink" title="11.配置监听"></a>11.配置监听</h3><ul>
+<li><p>如配置hostname步骤跳过了的,请修改 <strong>listener.ora</strong> 和 <strong>tnsnames.ora</strong> 的host为自己的host,配置了的请忽略</p>
+<ol>
+<li><pre><code class="shell">cd /data/app/oracle/product/11.2.0/network/admin/
+</code></pre>
+</li>
+<li><pre><code class="shell">vim listener.ora
+</code></pre>
+</li>
+<li><pre><code class="shell">vim tnsnames.ora
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>执行以下命令配置监听</p>
+<ol>
+<li><pre><code class="shell">su - oracle
+</code></pre>
+</li>
+<li><pre><code class="shell">netca /silent /responsefile /data/etc/netca.rsp
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>输出如下</p>
+<p><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200425140645835.png" alt="image-20200425140645835.png"></p>
+</li>
+<li><p>查看监听端口</p>
+<pre><code class="shell">netstat -tnpl | grep 1521
+</code></pre>
+</li>
+</ul>
+<h3 id="12-静默创建数据库"><a href="#12-静默创建数据库" class="headerlink" title="12.静默创建数据库"></a>12.静默创建数据库</h3><ul>
+<li><p>切换root用户</p>
+<pre><code class="shell">su - root
+</code></pre>
+</li>
+<li><p>使用 <strong>vim /data/etc/dbca.rsp</strong> 命令编辑该文件使之对应如下</p>
+<pre><code class="shell">[GENERAL]
+RESPONSEFILE_VERSION = &quot;11.2.0&quot;
+OPERATION_TYPE = &quot;createDatabase&quot;
+[CREATEDATABASE]
+GDBNAME = &quot;orcl&quot;
+SID = &quot;orcl&quot;
+SYSPASSWORD = &quot;oracle&quot;
+SYSTEMPASSWORD = &quot;oracle&quot;
+SYSMANPASSWORD = &quot;oracle&quot;
+DBSNMPPASSWORD = &quot;oracle&quot;
+DATAFILEDESTINATION =/data/app/oracle/oradata
+RECOVERYAREADESTINATION=/data/app/oracle/fast_recovery_area
+CHARACTERSET = &quot;AL32UTF8&quot;
+TOTALMEMORY = &quot;1638&quot;
+</code></pre>
+</li>
+<li><p>执行以下命令静默建库</p>
+<ol>
+<li><pre><code class="shell">su - oracle
+</code></pre>
+</li>
+<li><pre><code class="shell">dbca -silent -responseFile /data/etc/dbca.rsp
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>执行过程如下</p>
+<p><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200425144007972.png" alt="image-20200425144007972.png"></p>
+</li>
+<li><p>查看进程</p>
+<pre><code class="shell">ps -ef | grep ora_ | grep -v grep
+</code></pre>
+<p><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200425144347517.png" alt="image-20200425144347517.png"></p>
+</li>
+<li><p>查看监听状态</p>
+<pre><code class="shell">lsnrctl status
+</code></pre>
+<p><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200425144621822.png" alt="image-20200425144621822.png"></p>
+<h4 id="到这Oracle已经安装完毕"><a href="#到这Oracle已经安装完毕" class="headerlink" title="到这Oracle已经安装完毕"></a>到这Oracle已经安装完毕</h4></li>
+</ul>
+<h3 id="13-登录数据库-sqlplus不能上下左右退格请看14步骤解决"><a href="#13-登录数据库-sqlplus不能上下左右退格请看14步骤解决" class="headerlink" title="13.登录数据库(sqlplus不能上下左右退格请看14步骤解决)"></a>13.登录数据库(sqlplus不能上下左右退格请看14步骤解决)</h3><ul>
+<li><p>进入sqlplus</p>
+<ol>
+<li><pre><code class="shell">sqlplus / as sysdba
+</code></pre>
+</li>
+<li><pre><code class="shell">select status from v$instance;
+</code></pre>
+<p><img src="/2020/05/01/Contos命令安装Oracle11G/11.png" alt="11.png"></p>
+</li>
+</ol>
+</li>
+<li><p>出现上图情况的解决方式</p>
+<ol>
+<li><pre><code class="shlee">startup
+</code></pre>
+<p><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200426224521920.png" alt="image-20200426224521920.png"></p>
+<p>输入 <strong>startup</strong> 出现上图情况,解决方式</p>
+<ol>
+<li><pre><code>将 /data/app/oracle/admin/orcl/pfile/ 该目录下的init.ora.xxxxxx文件copy到对应上图的file后面那截路径名为initORCL.ora的文件,如下图:
+</code></pre></li>
+<li><p><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200428224631364.png" alt="image-20200428224631364.png"></p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>上步执行完后继续 <strong>sqlplus / as sysdba</strong> 然后 <strong>startup</strong></p>
+<p><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200428230841366.png" alt="image-20200428230841366.png"></p>
+<p>如出现上图,解决如下:</p>
+<ol>
+<li><pre><code class="shell">su - root
+</code></pre>
+</li>
+<li><pre><code class="shell">sudo  mount -o remount,size=20G  /dev/shm
+</code></pre>
+<p>再次startup时就启动成功了,结果如下:</p>
+<p><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200428231321694.png" alt="image-20200428231321694.png"></p>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>查看数据库编码,不显示UTF-8的重启一下系统</p>
+<ol>
+<li><pre><code class="sql">select userenv(&#39;language&#39;) from dual;
+</code></pre>
+<p>输出如下:</p>
+<p><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200426225412600.png" alt="image-20200426225412600.png"></p>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>查看数据库版本</p>
+<ol>
+<li><pre><code class="sql">select * from v$version;
+</code></pre>
+<p>输出如下:</p>
+<p><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200426230300134.png" alt="image-20200426230300134.png"></p>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>激活scott用户</p>
+<ol>
+<li><pre><code class="sql">alter user scott account unlock;
+</code></pre>
+</li>
+<li><pre><code class="sql">alter user scott identified by xxx; -- 设置scott用户密码,xxx位置是你要设置的密码的部分
+</code></pre>
+</li>
+<li><pre><code class="sql">select username,account_status from dba_users;
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="14-安装rlwrap组件解决sqlplus不能上下左右退格操作"><a href="#14-安装rlwrap组件解决sqlplus不能上下左右退格操作" class="headerlink" title="14.安装rlwrap组件解决sqlplus不能上下左右退格操作"></a>14.安装rlwrap组件解决sqlplus不能上下左右退格操作</h3><p>​    下载的时候连接失败的可以尽量多试几次,实在不行网盘里也有这两个压缩包,将两个压缩包用ftp工具传输到<strong>root</strong>   </p>
+<p>​    目录下再执行安装等操作也行的~</p>
+<ul>
+<li><p>下载之前,首先配置hosts,使用 <strong>vim /etc/hosts</strong> 命令进入文件添加如下</p>
+<ol>
+<li><pre><code class="shell">199.232.68.133 raw.githubusercontent.com
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>下载安装readline组件</p>
+<ol>
+<li><pre><code class="shell">wget https://raw.githubusercontent.com/leesin-zed/test/master/readline-6.2.tar.gz
+</code></pre>
+</li>
+<li><pre><code class="shell">tar xvf readline-6.2.tar.gz
+</code></pre>
+</li>
+<li><pre><code class="shell">cd readline-6.2
+</code></pre>
+</li>
+<li><pre><code class="shell">./configure &amp;&amp; make &amp;&amp; make install
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>下载rlwrap组件</p>
+<ol>
+<li><pre><code class="shell">wget https://raw.githubusercontent.com/leesin-zed/test/master/rlwrap-0.43.tar.gz
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>解压、编译、安装</p>
+<ol>
+<li><pre><code class="shell">tar zxf rlwrap-0.43.tar.gz
+</code></pre>
+</li>
+<li><pre><code class="shell">cd rlwrap-0.43
+</code></pre>
+</li>
+<li><pre><code class="shell">yum install readline*
+</code></pre>
+</li>
+<li><pre><code class="shell">./configure --prefix=/home/oracle/3rd/rlwrap-0.43
+</code></pre>
+</li>
+<li><pre><code class="shell">make
+</code></pre>
+</li>
+<li><pre><code class="shell">make install
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p><strong>切换成oracle用户</strong>  使用 <strong>vim ~/.bash_profile</strong> 命令在最后配置以下两条环境变量,</p>
+<ol>
+<li><pre><code class="shell">export PATH=$HOME/3rd/rlwrap-0.43/bin:$PATH
+</code></pre>
+</li>
+<li><pre><code class="shell">alias sqlplus=&quot;rlwrap sqlplus&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>刷新环境变量使之生效</p>
+<ol>
+<li><pre><code class="shell">source ~/.bash_profile
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="15-开放端口"><a href="#15-开放端口" class="headerlink" title="15.开放端口"></a>15.开放端口</h3><ul>
+<li><p>Contos 7 版本开放端口</p>
+<ol>
+<li><pre><code class="shell">firewall-cmd --zone=public --add-port=1521/tcp --permanent
+</code></pre>
+</li>
+<li><pre><code class="shell">firewall-cmd --reload
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>Contos 6 版本开放端口</p>
+<ol>
+<li><pre><code class="shell">/sbin/iptables -I INPUT -p tcp --dport 1521 -j ACCEPT
+</code></pre>
+</li>
+<li><pre><code class="shell">/etc/init.d/iptables save
+</code></pre>
+</li>
+<li><pre><code class="shell">service iptables restart
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="16-远程连接"><a href="#16-远程连接" class="headerlink" title="16.远程连接"></a>16.远程连接</h3><ul>
+<li><p>我这里用的是Navicat Premium 15,安装包和注册机在上面的网盘里</p>
+</li>
+<li><p>安装就不说了,直接注册机:</p>
+<ol>
+<li><p>安装完成先不要打开软件</p>
+</li>
+<li><p>打开解压完成的注册机,如果报毒就把杀毒软件先关闭一下</p>
+</li>
+<li><p>打开软件显示以下</p>
+</li>
+<li><p><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200428125453641.png" alt="image-20200428125453641.png"></p>
+</li>
+<li><p><strong>点击Patch按钮找到软件安装目录的navicat.exe文件打开</strong></p>
+</li>
+<li><p><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200428130327752.png" alt="image-20200428130327752.png"></p>
+</li>
+<li><p><strong>打开后出现如下提示:</strong></p>
+</li>
+<li><p><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200428130720868.png" alt="image-20200428130720868.png"></p>
+</li>
+<li><p><strong>然后点击右侧的Generate按钮左侧框中会生成一个密钥,我们复制这段密钥,然后打开软件,弹出的框我们选择注册,将复制的密钥粘贴进去然后点击激活~</strong></p>
+</li>
+<li><p><strong>点击激活后会提示如下,我们选择手动激活</strong></p>
+</li>
+<li><p><img src="https://img2018.cnblogs.com/i-beta/1680705/202001/1680705-20200122142025592-1543971080.png" alt="https://img2018.cnblogs.com/i-beta/1680705/202001/1680705-20200122142025592-1543971080.png"></p>
+</li>
+<li><p><strong>点击手动激活后会有一个请求码</strong></p>
+</li>
+<li><p><strong>复制请求码到注册机中的Request Code框框里面，之后点击Activation Code下面的Generate按钮就会生成一个激活码</strong></p>
+</li>
+<li><p><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200428133039235.png" alt="image-20200428133039235.png"></p>
+</li>
+<li><p><strong>再将注册机生成的激活码复制到Navicat Premium 15的激活码框框里,点击激活就搞定了~</strong></p>
+<p>​    </p>
+</li>
+</ol>
+</li>
+<li><p><strong>打开软件测试远程连接</strong></p>
+<ol>
+<li><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200428135526163.png" alt="image-20200428135526163.png"></li>
+<li><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200428234356576.png" alt="image-20200428234356576.png"></li>
+<li><img src="/2020/05/01/Contos命令安装Oracle11G/image-20200428234420089.png" alt="image-20200428234420089.png"></li>
+</ol>
+</li>
+</ul>
+<h3 id="17-Oracle开机自动启动"><a href="#17-Oracle开机自动启动" class="headerlink" title="17.Oracle开机自动启动"></a>17.Oracle开机自动启动</h3><ul>
+<li><p>设置开机自动启动就无需手动开启监听、实例这些操作了</p>
+<ol>
+<li><p>切换root用户</p>
+<pre><code class="shell">su - root
+</code></pre>
+</li>
+<li><p>使用 <strong>vim /data/app/oracle/product/11.2.0/bin/dbstart</strong> 命令,将参数值为1的,修改为以下参数值</p>
+<pre><code class="shell">ORACLE_HOME_LISTNER=$ORACLE_HOME
+</code></pre>
+</li>
+<li><p>使用 <strong>vim /data/app/oracle/product/11.2.0/bin/dbshut</strong> 命令,同上</p>
+<pre><code class="shell">ORACLE_HOME_LISTNER=$ORACLE_HOME
+</code></pre>
+</li>
+<li><p>使用 <strong>vim /etc/oratab</strong> 命令,将N改成Y</p>
+<pre><code class="shell">orcl:/data/app/oracle/product/11.2.0:Y
+</code></pre>
+</li>
+<li><p>使用 <strong>vim /etc/rc.d/init.d/oracle</strong> 命令,复制以下,创建文件</p>
+<p>注意: 粘贴时顶部两行会缺失,请将缺失的部分再复制粘贴上去(第一行没有,第二行开头缺失)</p>
+<pre><code class="shell">#! /bin/bash
+# oracle: Start/Stop Oracle Database 11g R2
+#
+# chkconfig: 345 90 10
+# description: The Oracle Database is an Object-Relational Database Management System.
+#
+# processname: oracle
+. /etc/rc.d/init.d/functions
+LOCKFILE=/var/lock/subsys/oracle
+ORACLE_HOME=/data/app/oracle/product/11.2.0
+ORACLE_USER=oracle
+case &quot;$1&quot; in
+&#39;start&#39;)
+   if [ -f $LOCKFILE ]; then
+      echo $0 already running.
+      exit 1
+   fi
+   echo -n $&quot;Starting Oracle Database:&quot;
+   su - $ORACLE_USER -c &quot;$ORACLE_HOME/bin/lsnrctl start&quot;
+   su - $ORACLE_USER -c &quot;$ORACLE_HOME/bin/dbstart $ORACLE_HOME&quot;
+   su - $ORACLE_USER -c &quot;$ORACLE_HOME/bin/emctl start dbconsole&quot;
+   touch $LOCKFILE
+   ;;
+&#39;stop&#39;)
+   if [ ! -f $LOCKFILE ]; then
+      echo $0 already stopping.
+      exit 1
+   fi
+   echo -n $&quot;Stopping Oracle Database:&quot;
+   su - $ORACLE_USER -c &quot;$ORACLE_HOME/bin/lsnrctl stop&quot;
+   su - $ORACLE_USER -c &quot;$ORACLE_HOME/bin/dbshut&quot;
+   su - $ORACLE_USER -c &quot;$ORACLE_HOME/bin/emctl stop dbconsole&quot;
+   rm -f $LOCKFILE
+   ;;
+&#39;restart&#39;)
+   $0 stop
+   $0 start
+   ;;
+&#39;status&#39;)
+   if [ -f $LOCKFILE ]; then
+      echo $0 started.
+      else
+      echo $0 stopped.
+   fi
+   ;;
+*)
+   echo &quot;Usage: $0 [start|stop|status]&quot;
+   exit 1
+esac
+ exit 0
+</code></pre>
+</li>
+<li><p>赋予权限</p>
+<pre><code class="shell"> chmod +x /etc/init.d/oracle
+</code></pre>
+</li>
+<li><p>开机启动Oracle</p>
+<pre><code class="shell"> chkconfig oracle on
+</code></pre>
+</li>
+<li><p>赋予启动文件权限</p>
+<pre><code class="shell"> cd /data/app/oracle/product/11.2.0/bin/
+</code></pre>
+<pre><code class="shell"> chmod 6751 oracle
+</code></pre>
+<pre><code class="shell"> cd /var/tmp
+</code></pre>
+<pre><code class="shell"> chown -R oracle:oinstall .oracle
+</code></pre>
+<p>参考:<a href="https://blog.csdn.net/chenghuikai/article/details/85776622" target="_blank" rel="noopener">https://blog.csdn.net/chenghuikai/article/details/85776622</a></p>
+</li>
+</ol>
+</li>
+</ul>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.4.1/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.4.1/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="http://localhost:4000/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.4/images/headimg/girl.jpg" itemprop="image" alt="YwT" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="http://localhost:4000/" itemprop="url" rel="author">YwT</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 hojun<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2018</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+<!-- 网站运行时间 -->
+<p align = 'center'><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></p><script>
+  var now = new Date();
+  function createtime() {
+    var grt= new Date("03/20/2020 16:44:00");//此处修改你的建站时间或者网站上线时间
+    now.setTime(now.getTime()+250);
+    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+    if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+    document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+  }
+  setInterval("createtime()",250);</script>
+
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <!-- 实现换肤功能 -->
+  <div class="skin-menu no-select" id="mainskin" style="position: fixed">
+
+ <div class="theme-controls row-container">
+
+  <ul class="menu-list">
+
+   <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+
+   <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+
+   <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+
+   <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+
+   <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+
+   <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+
+   <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+
+   <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+
+  </ul>
+
+ </div>
+
+</div>
+
+<canvas id="night-mode-cover"></canvas> 
+  <div class="changeSkin-gear no-select">
+
+  <div class="keys" id="setbtn"> 
+
+   <span id="open-skinMenu"> 切换主题 | SCHEME TOOL  
+
+     <i class="iconfont icon-gear inline-block rotating"></i> 
+
+   </span>
+
+  </div>
+
+</div>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/leesin-zed/leesin-zed.github.io@1.4.1/images/headimg/girl.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">YwTleesin-zed</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/honjun" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="http://weibo.com/mashirozx?is_all=1" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/资源/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/随想/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/转载/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/图集/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Lab
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/client/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+            客户端
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2660651585"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>
